@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { ethers } from "ethers"
 import Swal from 'sweetalert2'
 
-export default function WeiEtherCalculator(){
-  const [weiAmount,setWeiAmount] = useState('')
+export default function GweiEtherCalculator(){
+  const [gweiAmount,setGweiAmount] = useState('')
   const [etherAmount,setEtherAmount] = useState('')
   const [switchUp,setSwitchUp] = useState(true)
 
@@ -11,10 +11,10 @@ export default function WeiEtherCalculator(){
     let value = e.target.value
 
     if(value === '' || isNaN(parseFloat(value))){
-      setWeiAmount('')
+      setGweiAmount('')
     }else{
-      let amountBN = ethers.utils.parseUnits(value)
-      setWeiAmount(amountBN.toString())
+      let amountBN = ethers.utils.parseUnits(value,"gwei")
+      setGweiAmount(amountBN.toString())
     }
 
     if(isNaN(parseFloat(value)) || value[0] == '0'){
@@ -24,7 +24,7 @@ export default function WeiEtherCalculator(){
     }
   }
 
-  function handleWeiChange(e) {
+  function handleGweiChange(e) {
     let value = e.target.value
 
     if(value === '' || isNaN(parseFloat(value))){
@@ -55,18 +55,18 @@ export default function WeiEtherCalculator(){
             <h1 className="mb-5 text-xl">
               <span>Ether</span>
               <svg className="inline-block w-5 h-5 mx-1" viewBox="0 0 1024 1024"><path fill="currentColor" d="M847.9 592H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h605.2L612.9 851c-4.1 5.2-.4 13 6.3 13h72.5c4.9 0 9.5-2.2 12.6-6.1l168.8-214.1c16.5-21 1.6-51.8-25.2-51.8zM872 356H266.8l144.3-183c4.1-5.2.4-13-6.3-13h-72.5c-4.9 0-9.5 2.2-12.6 6.1L150.9 380.2c-16.5 21-1.6 51.8 25.1 51.8h696c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"></path></svg>
-              <span>Wei</span>
+              <span>Gwei</span>
             </h1>
 
             { switchUp ? (
               <>
                 <Input title="Ether Amount" placeholder="Ether" amount={etherAmount} handleChange={handleEtherChange} isDisabled={false} />
                 <svg onClick={handleSwitch} className="p-2 my-5 border rounded-full cursor-pointer transition-all hover:scale-150 w-11 h-11" viewBox="0 0 24 24"><path fill="#888888" d="m18 4l-4 4h3v8a2 2 0 0 1-2 2a2 2 0 0 1-2-2V8a4 4 0 0 0-4-4a4 4 0 0 0-4 4v8H2l4 4l4-4H7V8a2 2 0 0 1 2-2a2 2 0 0 1 2 2v8a4 4 0 0 0 4 4a4 4 0 0 0 4-4V8h3l-4-4Z"></path></svg>
-                <Input title="Wei Amount" placeholder="Wei" amount={weiAmount} handleChange={handleWeiChange} isDisabled={true} />
+                <Input title="Gwei Amount" placeholder="Gwei" amount={gweiAmount} handleChange={handleGweiChange} isDisabled={true} />
               </>
             ) : (
               <>
-                <Input title="Wei Amount" placeholder="Wei" amount={weiAmount} handleChange={handleWeiChange} isDisabled={false} />
+                <Input title="Gwei Amount" placeholder="Gwei" amount={gweiAmount} handleChange={handleGweiChange} isDisabled={false} />
                 <svg onClick={handleSwitch} className="p-2 my-5 border rounded-full cursor-pointer transition-all hover:scale-150 w-11 h-11" viewBox="0 0 24 24"><path fill="#888888" d="m18 4l-4 4h3v8a2 2 0 0 1-2 2a2 2 0 0 1-2-2V8a4 4 0 0 0-4-4a4 4 0 0 0-4 4v8H2l4 4l4-4H7V8a2 2 0 0 1 2-2a2 2 0 0 1 2 2v8a4 4 0 0 0 4 4a4 4 0 0 0 4-4V8h3l-4-4Z"></path></svg>
                 <Input title="Ether Amount" placeholder="Ether" amount={etherAmount} handleChange={handleEtherChange} isDisabled={true} />
               </>
