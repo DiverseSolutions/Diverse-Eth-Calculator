@@ -8,6 +8,5 @@ const nextConfig = {
 module.exports = withPWA({
   pwa: {
     dest: 'public'
-  },
-  nextConfig
+  }
 })
