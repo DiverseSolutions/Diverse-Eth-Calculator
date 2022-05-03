@@ -33,17 +33,17 @@ export default function Document() {
         <link rel='manifest' href='/manifest.json' />
 
         <meta name='twitter:card' content='summary' />
-        <meta name='twitter:url' content='https://yourdomain.com' />
-        <meta name='twitter:title' content='PWA App' />
-        <meta name='twitter:description' content='Best PWA App in the world' />
-        <meta name='twitter:image' content='https://yourdomain.com/icons/android-chrome-192x192.png' />
-        <meta name='twitter:creator' content='@DavidWShadow' />
+        <meta name='twitter:url' content='https://ethcalculator.dsolutions.mn/' />
+        <meta name='twitter:title' content='Diverse' />
+        <meta name='twitter:description' content='Diverse Eth Calculator' />
+        <meta name='twitter:image' content='https://ethcalculator.dsolutions.mn/android/android-launchericon-192-192.png' />
+        <meta name='twitter:creator' content='@0xMnkhod' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='PWA App' />
-        <meta property='og:description' content='Best PWA App in the world' />
-        <meta property='og:site_name' content='PWA App' />
-        <meta property='og:url' content='https://yourdomain.com' />
-        <meta property='og:image' content='https://yourdomain.com/icons/apple-touch-icon.png' />
+        <meta property='og:title' content='Diverse EthCalc' />
+        <meta property='og:description' content='Diverse Eth Calculator' />
+        <meta property='og:site_name' content='Diverse EthCalc' />
+        <meta property='og:url' content='https://ethcalculator.dsolutions.mn/' />
+        <meta property='og:image' content='https://ethcalculator.dsolutions.mn/icons/apple-touch-icon.png' />
       </Head>
       <body className="">
         <Main />
