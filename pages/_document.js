@@ -26,7 +26,7 @@ export default function Document() {
         <link rel='apple-touch-icon' sizes='167x167' href='/ios/167.png' />
 
         <link rel='icon' type='image/png' sizes='32x32' href='/ios/32.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/ios/32.png' />
+        <link rel='icon' type='image/png' sizes='16x16' href='/ios/16.png' />
         <link rel='mask-icon' type='image/png' href='/ios/32.png' />
         <link rel='shortcut icon' href='/ios/32.png' />
 
