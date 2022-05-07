@@ -6,7 +6,7 @@ import CheckAddress from '../components/CheckAddress';
 
 export default function Home() {
   return (
-    <div className="my-10 grid grid-cols-3 gap-y-24">
+    <div className="my-10 grid grid-cols-1 lg:grid-cols-3 gap-y-24">
       <WeiEtherCalculator />
 
       <UnitEtherCalculator />
